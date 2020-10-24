@@ -1,0 +1,168 @@
+/*
+Palette, use only those colors!
+1. Solid White: #FFF
+2. Hard Blue: #2B5CFA
+3. Normal Blue: #3A77F2
+4. Dark Blue: #25395B
+5. Gray: #545454
+*/
+
+
+:root {
+	--darkGray: #444444;
+	--midGray: #515151;
+	--lightGray: #7A7A7A;
+	--darkGreen: #5C9565;
+    --midGreen: #57CE69;
+    --lightGreen: #93E89F;
+}
+
+a:link{
+    text-decoration: none;
+    color: var(--lightGreen);
+}
+
+a:visited{
+    text-decoration: none;
+    color: var(--lightGreen);
+}
+
+a:hover{
+    text-decoration: none;
+    color: var(--lightGreen);
+}
+
+a:active{
+    text-decoration: none;
+    color: var(--midGray);
+}
+
+
+body{
+    background-color: var(--darkGray);
+    margin: 0;
+    padding: 0;
+}
+
+.xTopbar{
+    font-family: 'Open Sans', sans-serif;
+    height: 200px;
+    background-color: var(--midGray);
+
+}
+
+.xBotbar{
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--midGray);
+    padding: 50px;
+}
+
+.xContent{
+    background-color: var(--lightGray);
+    min-height: 600px;
+}
+
+.xNav{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    height: 50px;
+}
+
+.xNavItem{
+    border: 1px solid var(--midGreen);
+    border-top: none;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: var(--lightGray);
+    animation-name: cardAnimIn;
+    animation-duration: 0.3s;
+}
+
+.xNavItem:hover{
+    background-color: var(--lightGreen);
+    color: var(--midGray);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    animation-name: cardAnimOut;
+    animation-duration: 0.3s;
+}
+
+@keyframes cardAnimOut {
+    from {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    to {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@keyframes cardAnimIn {
+    from {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    to {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+
+/* Materialize overrides */
+
+.container{
+
+}
+
+.container img{
+    width: 160px;
+    height: 160px;
+    /*margin-left: 400px;*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container h1{
+    font-family: 'Racing Sans One', cursive;
+    font-size: 72px;
+    background: -webkit-linear-gradient(#515151, #57CE69);
+    -webkit-text-stroke: 1px white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.valign-wrapper{
+    justify-content: center;
+    border-bottom: 1px solid var(--lightGreen);
+}
+
+.nav-wrapper{
+    background-color: var(--lightGray);
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+.collection a.collection-item{
+    background-color: var(--darkGray);
+    color: var(--darkGreen) !important;
+}
+
+.collection .collection-item:hover{
+    background-color: var(--lightGreen);
+    color: var(--darkGreen) !important;
+}
+
+p{
+    color: var(--midGreen);
+}
+
+h3{
+    color: var(--darkGreen);
+}
