@@ -5,7 +5,10 @@ import { requiresAuth } from 'express-openid-connect';
 import axios from 'axios';
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
+
+// Then pass them to cors:
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -14,7 +17,7 @@ app.use(bodyParser.json());
 const config = {
     authRequired: false,
     auth0Logout: true,
-    baseURL: 'http://localhost:3000',
+    baseURL: 'http://localhost:8080',
     clientID: 'w70E9o8uRt6HRVO3vPf84ScBuX92J5Rb',
     issuerBaseURL: 'https://dev-uxai7-vh.eu.auth0.com',
     secret: 'LONG_RANDOM_STRING'
