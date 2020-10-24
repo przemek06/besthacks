@@ -37,6 +37,11 @@ a:active{
     color: var(--midGray);
 }
 
+.gallery{
+    width: 100%;
+    min-height: 100px;
+    background-color: var(--darkGray);
+}
 
 body{
     background-color: var(--darkGray);
@@ -60,6 +65,19 @@ body{
 .xContent{
     background-color: var(--lightGray);
     min-height: 600px;
+}
+
+.xContent .row{
+    justify-content: center;
+}
+
+.xBorderBottom{
+    justify-content: center;
+    border-bottom: 1px solid var(--lightGreen);
+}
+
+.xBorderLight{
+    border: 1px solid var(--lightGreen);
 }
 
 .xNav{
@@ -135,11 +153,6 @@ body{
     -webkit-text-stroke: 1px white;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-.valign-wrapper{
-    justify-content: center;
-    border-bottom: 1px solid var(--lightGreen);
 }
 
 .nav-wrapper{
