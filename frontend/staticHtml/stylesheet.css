@@ -9,9 +9,9 @@ Palette, use only those colors!
 
 
 :root {
-	--darkGray: #444444;
-	--midGray: #515151;
-	--lightGray: #7A7A7A;
+	--darkGray: hsla(0, 0%, 27%, 0.541);
+	--midGray: rgba(81, 81, 81, 0.527);
+	--lightGray: rgba(122, 122, 122, 0.555);
 	--darkGreen: #5C9565;
     --midGreen: #57CE69;
     --lightGreen: #93E89F;
@@ -44,9 +44,14 @@ a:active{
 }
 
 body{
-    background-color: var(--darkGray);
+    /*background-color: var(--darkGray);*/
     margin: 0;
     padding: 0;
+    background: url(pics/cover.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .xTopbar{
