@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import { ToastContainer } from 'react-toastify'
 
 import Nav from './Components/Nav'
-import Profile from './Components/Profile'
+import Login from './Components/Login'
 import About from './Components/About'
 import Index from './Components/Index'
 
@@ -12,11 +12,13 @@ function App() {
     <React.Fragment>
       <ToastContainer/>
       <Nav/>
-      <Switch>
-        <Route path="/profile" component={Profile} />
-        <Route path="/about" component={About} />
-        <Route path="/" component={Index} />
-      </Switch>
+      <div className="container">
+        <Switch>
+          <Route path="/login" component={Login} />
+          <Route path="/about" component={About} />
+          <Route path="/" component={Index} />
+        </Switch>
+      </div>
     </React.Fragment>
   ); 
 }

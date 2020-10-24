@@ -1,6 +1,6 @@
 import axios from './HTTP'
 
-const url = "/login"
+const url = "/User/login"
 
 export async function login(email, password) {
   const { data } = await axios.post(url, {email, password})

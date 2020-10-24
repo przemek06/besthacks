@@ -5,10 +5,10 @@ export default class Nav extends React.Component {
   render() {
     return (
       <nav>
-        <div className="nav-wrapper">
+        <div className="nav-wrapper z-depth-2">
           <Link to="/" className="brand-logo">AtmosHere</Link>
-          <ul id="nav-mobile" className="right hide-on-med-and-down">
-            <li><Link to="/profile">Profile</Link></li>
+          <ul className="right hide-on-med-and-down">
+            <li><Link to="/login">Log In</Link></li>
             <li><Link to="/about">About</Link></li>
           </ul>
         </div>
