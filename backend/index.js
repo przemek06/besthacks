@@ -10,12 +10,30 @@ const router = express.Router();
 
 const app = express();
 const port = process.env.PORT || 8080;
+<<<<<<< HEAD
+=======
+
+// Then pass them to cors:
+
+>>>>>>> 1eafa40c3de5c5240c46ff6ef1671cc0117c0773
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+<<<<<<< HEAD
 const lat = 51.0;
 const lon = 17.0;
+=======
+//TODO skorygować config
+const config = {
+    authRequired: false,
+    auth0Logout: true,
+    baseURL: 'http://localhost:8080',
+    clientID: 'w70E9o8uRt6HRVO3vPf84ScBuX92J5Rb',
+    issuerBaseURL: 'https://dev-uxai7-vh.eu.auth0.com',
+    secret: 'LONG_RANDOM_STRING'
+};
+>>>>>>> 1eafa40c3de5c5240c46ff6ef1671cc0117c0773
 
 
 app.use('/', router);
