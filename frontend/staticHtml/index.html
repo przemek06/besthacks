@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>AtmosHere - Air quality in your city.</title>
+  <link rel="stylesheet" href="stylesheet.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Racing+Sans+One&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+  <body>
+
+        <div class="xTopbar">
+        <div class="container" style="height: 100%;">   
+            <div class="valign-wrapper xBorderBottom">
+                 <img src="pics/logo2.png"/> <h1>AtmosHere</h1>
+            </div>
+            <!--nav>
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo">Logo</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="sass.html">Sass</a></li>
+                        <li><a href="badges.html">Components</a></li>
+                        <li><a href="collapsible.html">JavaScript</a></li>
+                    </ul>
+                </div>
+            </nav-->
+        </div>
+    </div>
+    <div class="container" style="min-height: auto; padding-bottom: 50px;">
+        <div class="xNav">
+            <a href="#"><div class="xNavItem">Strona główna</div></a>
+            <a href="#"><div class="xNavItem">Zaloguj się</div></a>
+            <a href="#"><div class="xNavItem">Twój Profil</div></a>
+        </div>
+        <div class="xContent center-align">
+            <div class="container" style="padding-top: 50px;"><h1>Projekt AtmosHere</h1></div>
+
+            <div class="container" ><p>jest aplikacją webową pozwalającą Ci na śledzenie poziomu zanieczyszczenie powietrza w twojej okolicy. Dzięki niej możesz na bieżąco sprawdzać historię jakości powietrza w twoim mieście, a następnie samemu przyczynić się do poprawy, obecnie nieciekawej sytuacji, efektu cieplarnianego.</p></div>
+            <div class="row">
+                <div class="col s3 offset-s2">
+                    <form action="https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyDgCBLLIOblaxVWEnq8rzo-K2o5sGc-Obg" method="post">
+                        <button type="submit" formmethod="post">Submit using POST</button>
+                    </form> 
+                    <a class="waves-effect waves-light btn-large">Włącz lokalizację</a>
+                </div>
+                <div class="col s6">
+                        <iframe
+                        width="600"
+                        height="450"
+                        frameborder="0" style="border:0"
+                        src="https://www.google.com/maps/embed/v1/place?key=API_KEY
+                          &q=Space+Needle,Seattle+WA" allowfullscreen>
+                      </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <div class="xBotbar row left-align">
+        <div class="container col s3 offset-s3 row">
+            <div></div>
+            <h3> AtmosHere </h3>
+            <p>Strona dzięki której możesz śledzić jakość powietrza w twojej okolicy oraz samemu zadecydować o losie naszej planety.</p>
+        </div>
+        <div class="container col s3">
+            <p>Linki</p>
+            <div class="collection">
+                <a href="#!" class="collection-item">Strona główna</a>
+                <a href="#!" class="collection-item">O nas</a>
+                <a href="#!" class="collection-item">Ciekawe strony</a>
+                <a href="#!" class="collection-item">Kontakt</a>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
