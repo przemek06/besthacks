@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Switch } from "react-router-dom";
+import { ToastContainer } from 'react-toastify'
 
 import Nav from './Components/Nav'
 import Profile from './Components/Profile'
@@ -9,6 +10,7 @@ import Index from './Components/Index'
 function App() {
   return (
     <React.Fragment>
+      <ToastContainer/>
       <Nav/>
       <Switch>
         <Route path="/profile" component={Profile} />
