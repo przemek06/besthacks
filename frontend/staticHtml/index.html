@@ -38,16 +38,19 @@
             <div class="container" ><p>jest aplikacją webową pozwalającą Ci na śledzenie poziomu zanieczyszczenie powietrza w twojej okolicy. Dzięki niej możesz na bieżąco sprawdzać historię jakości powietrza w twoim mieście, a następnie samemu przyczynić się do poprawy, obecnie nieciekawej sytuacji, efektu cieplarnianego.</p></div>
             <div class="row">
                 <div class="col s3 offset-s2">
+                    <form action="https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyDgCBLLIOblaxVWEnq8rzo-K2o5sGc-Obg" method="post">
+                        <button type="submit" formmethod="post">Submit using POST</button>
+                    </form> 
                     <a class="waves-effect waves-light btn-large">Włącz lokalizację</a>
                 </div>
                 <div class="col s6">
-                    <iframe
-                    width="600"
-                    height="450"
-                    frameborder="0" style="border:0"
-                    src="https://www.google.com/maps/embed/v1/place?key=API_KEY
-                        &q=Space+Needle,Seattle+WA" allowfullscreen>
-                    </iframe>
+                        <iframe
+                        width="600"
+                        height="450"
+                        frameborder="0" style="border:0"
+                        src="https://www.google.com/maps/embed/v1/place?key=API_KEY
+                          &q=Space+Needle,Seattle+WA" allowfullscreen>
+                      </iframe>
                 </div>
             </div>
         </div>
