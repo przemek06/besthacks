@@ -1,20 +1,21 @@
 import React from 'react';
-import './App.css';
-import { BrowserRouter as Router, Route} from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
-import Index from "./components/index";
-import Navbar from "./components/navbar";
-import viewProfile from "./components/profile";
-
+import Nav from './Components/Nav'
+import Profile from './Components/Profile'
+import About from './Components/About'
+import Index from './Components/Index'
 
 function App() {
   return (
- 	<Router>
-    	<Navbar />
-
-		<Route path="/" exact component={Index} />
-		<Route path="/profile" exact component={viewProfile} />
-	</Router>
+    <React.Fragment>
+      <Nav/>
+      <Switch>
+        <Route path="/profile" component={Profile} />
+        <Route path="/about" component={About} />
+        <Route path="/" component={Index} />
+      </Switch>
+    </React.Fragment>
   ); 
 }
 
