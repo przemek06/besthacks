@@ -5,6 +5,8 @@ import * as jwt from 'jsonwebtoken';
 import getPollutionData from './helpers/getPollutionData';
 import userRouter from './routes/userRouter';
 import validateUser from './helpers/validateUser';
+import chartDataProvider from './helpers/chartDataProvider';
+import drawChart from './helpers/drawChart';
 
 const app = express();
 const port = process.env.PORT || 8080;
@@ -25,10 +27,34 @@ app.use('/api/User',userRouter);
 
 app.use('/data/pollution', (req, res) => {
     getPollutionData.getData(lat,lon).then((response) => {
-        //res.json({status: "success", message: "profil", data:response})
-        res.json({status: "success", message: "coś tam działa", data:response.data.forecast.daily});
+        
+        // console.log(chartDataProvider.returnData(response.data.forecast.daily.pm10))
+        const arr = response.data.forecast.daily.pm10;
+        console.log(arr)
+        const labels = chartDataProvider.returnLabels(arr);
+        const data = chartDataProvider.returnData(arr);
+        console.log(labels,data)
+        drawChart.getChart(labels,data)
+            .then((response2) => {
+                res.json({status: "success", message: "Wykres się wygenerował pomyślnie", data: response2});
+                //console.log(response2)
+            })
+            .catch((err)=>{
+                console.error(err,"err 1")
+            });
+                         
+        })
+        .catch((err) => {
+            console.error(err, "err 2");
+        })
+    .catch((err) => {
+        console.error(err, "err 2");
     });
-});
+})
+
+
+
+
 
 //express nie ogarnia błędu 404
 app.use((req, res, next) => {
