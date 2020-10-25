@@ -1,0 +1,236 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+:root {
+	--darkGray: hsla(0, 0%, 27%, 0.541);
+	--midGray: rgba(81, 81, 81, 0.527);
+	--lightGray: rgba(122, 122, 122, 0.555);
+	--darkGreen: rgb(255, 255, 255);
+    --midGreen: rgb(255, 255, 255);
+    --lightGreen: rgb(255, 255, 255);
+	--myGray: rgba(122, 122, 122, 0.15);
+	--borderGray: rgba(122, 122, 122, 0.3);
+}
+
+
+
+
+a:visited{
+    text-decoration: none;
+    color: var(--lightGreen);
+}
+
+a:hover{
+    text-decoration: none;
+    color: var(--lightGreen);
+}
+
+a:active{
+    text-decoration: none;
+    color: var(--midGray);
+}
+
+.gallery{
+    width: 100%;
+    min-height: 100px;
+    background-color: var(--darkGray);
+}
+
+body{
+    /*background-color: var(--darkGray);*/
+    margin: 0;
+    padding: 0;
+    background: url(pics/cover.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.xTopbar{
+    font-family: 'Open Sans', sans-serif;
+    height: 200px;
+    background-color: var(--midGray);
+
+}
+
+.xBotbar{
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--myGray);
+    padding: 50px;
+}
+
+.xContent{
+    background-color: var(--lightGray);
+    min-height: 600px;
+}
+
+.xContent .row{
+    justify-content: center;
+}
+
+.xBorderBottom{
+    justify-content: center;
+    /*border-bottom: 1px solid var(--lightGreen)*/
+}
+
+.xBorderLight{
+   /* border: 1px solid var(--lightGreen);*/
+}
+
+.xNav{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    height: 50px;
+}
+
+.xNavItem{
+    border: 1px solid var(--midGreen);
+    border-top: none;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: var(--lightGray);
+    animation-name: cardAnimIn;
+    animation-duration: 0.3s;
+}
+
+.xNavItem:hover{
+    background-color: var(--lightGreen);
+    color: var(--midGray);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    animation-name: cardAnimOut;
+    animation-duration: 0.3s;
+}
+
+@keyframes cardAnimOut {
+    from {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    to {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@keyframes cardAnimIn {
+    from {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    to {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+
+/* Materialize overrides */
+
+.container{
+
+}
+
+.container img{
+    width: 160px;
+    height: 160px;
+    /*margin-left: 400px;*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container h1{
+    font-family: 'Racing Sans One', cursive;
+    font-size: 72px;
+    background: -webkit-linear-gradient(#515151, #57CE69);
+    -webkit-text-stroke: 1px white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-wrapper{
+    /*background-color: var(--lightGray);*/
+    /*position: -webkit-sticky; /* Safari */
+    /*position: sticky;*/
+    top: 0;
+}
+
+.collection a.collection-item{
+    background-color: var(--darkGray);
+    color: var(--darkGreen) !important;
+}
+
+.collection .collection-item:hover{
+    background-color: var(--lightGreen);
+    color: var(--darkGreen) !important;
+}
+
+p{
+    color: var(--midGreen);
+}
+
+h3{
+    color: var(--darkGreen);
+}
+#logo {
+	font-family: 'Racing Sans One', cursive;
+    font-size: 90px;
+	margin-top: 200px;
+	color: white;
+}
+#logo2 {
+	width: 180px;
+    height: 180px;
+    /*margin-left: 400px;*/
+    margin-top: 15px;
+    margin-bottom: 	20px;
+	margin-right: 20px;
+}
+#nav {
+	background-color: var(--myGray);
+	border-color: var(--borderGray);
+	border-width: 5px;
+}
+li{
+	margin-bottom: 20px;
+}
