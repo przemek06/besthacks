@@ -4,6 +4,7 @@ import { ToastContainer } from 'react-toastify'
 
 import Nav from './Components/Nav'
 import Login from './Components/Login'
+import Register from './Components/Register'
 import About from './Components/About'
 import Index from './Components/Index'
 
@@ -15,6 +16,7 @@ function App() {
       <div className="container">
         <Switch>
           <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
           <Route path="/about" component={About} />
           <Route path="/" component={Index} />
         </Switch>

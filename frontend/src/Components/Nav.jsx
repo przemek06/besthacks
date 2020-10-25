@@ -8,6 +8,7 @@ export default class Nav extends React.Component {
         <div className="nav-wrapper z-depth-2">
           <Link to="/" className="brand-logo">AtmosHere</Link>
           <ul className="right hide-on-med-and-down">
+            <li><Link to="/register">Register</Link></li>
             <li><Link to="/login">Log In</Link></li>
             <li><Link to="/about">About</Link></li>
           </ul>
