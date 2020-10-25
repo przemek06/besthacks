@@ -9,8 +9,8 @@ axios.interceptors.response.use(null, (error) => {
   const expectedError = error.response && error.response.status >= 400 && error.response.status < 500
 
   if (!expectedError) {
-    toast.error(error.response.status+' server error [Details in console]')
     console.log(error)
+    toast.error(error)
   }
 
   return Promise.reject(error)
