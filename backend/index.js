@@ -6,6 +6,7 @@ import userRouter from './routes/userRouter';
 import validateUser from './helpers/validateUser';
 import pollutionRouter from './routes/pollutionRouter';
 
+
 const app = express();
 const port = process.env.PORT || 8080;
 

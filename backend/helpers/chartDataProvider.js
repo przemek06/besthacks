@@ -11,8 +11,9 @@ module.exports = {
             })
             .setWidth(800)
             .setHeight(400)
-            .setBackgroundColor('transparent');
-        return myChart.getUrl()    
+            .setBackgroundColor('transparent')
+            
+        return myChart.getShortUrl()    
     },
     returnLabels: (arr) => {
         let result = [];

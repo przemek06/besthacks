@@ -17,15 +17,13 @@ router.get('/pm10', (req, res) => {
         const data = chartDataProvider.returnData(arr);
         console.log(labels,data)
         const url = chartDataProvider.wykresUrl(labels,data);
-        console.log(url)
-        
-        res.json({status: "succes", message: "Url do wykresu pm10", data:url})
-    
+        url.then((response2)=>{
+           res.json({status: "success", message: "Wykres pm10", data: response2})
+        });
+            
     })
-    .catch((err) => {
-        console.error(err, "err 2");
-    });
-});
+})
+    
 
 router.get('/', (req, res) => {
     getPollutionData.getData(lat,lon).then((response) => {
@@ -44,8 +42,10 @@ router.get('/pm25', (req, res) => {
         console.log(labels,data)
         const url = chartDataProvider.wykresUrl(labels,data);
         console.log(url)
+        url.then((response2)=>{
+            res.json({status: "success", message: "Wykres pm10", data: response2})
+        });
         
-        res.json({status: "succes", message: "Url do wykresu pm2.5", data:url})
     
     })
     .catch((err) => {
