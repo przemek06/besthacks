@@ -25,9 +25,9 @@ router.get('/pm10', (req, res) => {
 })
     
 
-router.get('/', (req, res) => {
+router.get('/aqi', (req, res) => {
     getPollutionData.getData(lat,lon).then((response) => {
-        res.json({status: "succes", message: "Wszystkie dane", data:response})
+        res.json({status: "succes", message: "Air quality index", data:response.data.aqi})
     });
 });
 
