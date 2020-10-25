@@ -17,7 +17,7 @@ module.exports = {
     returnLabels: (arr) => {
         let result = [];
         arr.forEach(element => {
-           result.push('"'+element.day+'"'); 
+           result.push(element.day); 
         });
         return result;
     },
